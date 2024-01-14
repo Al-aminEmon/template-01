@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(cute-room-ideas-1677096334.png);
+    background-size: cover;
+    background-position: center;
+}
+.navBar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoname{
+    /* width: 120px; */
+    cursor: pointer;
+    color: rgb(221, 221, 221);
+}
+.navLink > li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navLink > li > a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+.navLink > li::after{
+    content: '';
+    height: 7px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.navLink > li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50);
+    text-align: center;
+    color: white;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button {
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    /* font-weight: bold; */
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    background: transparent;
+    border: 2px solid #009688;
+    z-index: 1; /* Ensure the text is above the pseudo-elements */
+}
+
+button::before,
+button span {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+button::before {
+    background: #009688;
+    left: -100%;
+}
+
+button span {
+    /* background: #009688; */
+    width: 0;
+    bottom: 0;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+button:hover span {
+    width: 100%;
+}
